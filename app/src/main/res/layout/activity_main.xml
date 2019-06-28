@@ -14,5 +14,11 @@
             android:layout_height="30dp" android:id="@+id/textView" android:layout_weight="10"
             tools:text="Demo App" android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorPrimaryDark"
-            android:textAlignment="center"/>
+            android:textAlignment="center" android:visibility="visible"/>
+    <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="100dp"
+            android:layout_marginHorizontal="100dp"
+            android:lay tools:targetApi="o" android:text="@string/TapMeBtn" style="@android:style/Widget.Button"/>
 </LinearLayout>

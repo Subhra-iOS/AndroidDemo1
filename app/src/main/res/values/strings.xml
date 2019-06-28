@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidDemo1</string>
     <string name="lableTxtView">TextView</string>
+    <string name="TapMeBtn">Tap on Me</string>
 </resources>
