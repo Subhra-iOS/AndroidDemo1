@@ -20,6 +20,6 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="100dp"
             android:layout_marginHorizontal="100dp"
-            tools:targetApi="o" android:text="@string/TapMeBtn" style="@android:style/Widget.Button"
+            android:text="@string/TapMeBtn" style="@android:style/Widget.Button"
             android:id="@+id/tapOnMe"/>
 </LinearLayout>
