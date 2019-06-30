@@ -12,7 +12,7 @@
             android:layout_height="30dp" android:id="@+id/textView"
             tools:text="Demo App" android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorPrimaryDark"
-            android:textAlignment="center" android:visibility="visible" tools:targetApi="o"/>
+            android:textAlignment="center" android:visibility="visible"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
