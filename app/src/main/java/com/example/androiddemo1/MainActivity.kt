@@ -13,10 +13,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val button  = findViewById<Button>(R.id.tapOnMe)
+        val button  = findViewById<Button>(R.id.launchButton)
         button.setOnClickListener{
             // Do something in response to button click
-                Toast.makeText(this, "Test", Toast.LENGTH_LONG).show()
+               // Toast.makeText(this, "Test", Toast.LENGTH_LONG).show()
+              print("Test")
         }
 
 
