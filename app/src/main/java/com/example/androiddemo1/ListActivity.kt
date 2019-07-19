@@ -4,6 +4,7 @@ package com.example.androiddemo1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import  android.view.View
 
 class ListActivity : AppCompatActivity() {
 
@@ -16,6 +17,12 @@ class ListActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textLabel).apply {
             this.text = message
         }
+
+    }
+
+    fun didTapOnLoadAction(view : View){
+
+            print("Tap to load image")
 
     }
 
