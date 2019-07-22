@@ -1,8 +1,10 @@
 package com.example.androiddemo1
 
 
+import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Message
 import android.widget.TextView
 import  android.view.View
 
@@ -23,6 +25,15 @@ class ListActivity : AppCompatActivity() {
     fun didTapOnLoadAction(view : View){
 
             print("Tap to load image")
+            this.showLoader()
+    }
+
+    private fun showLoader(){
+
+        val loaderManager : ProgressDialog = ProgressDialog(this)
+        loaderManager.setCanceledOnTouchOutside(true)
+        loaderManager.closeOptionsMenu()
+        loaderManager.show()
 
     }
 
