@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val button  = findViewById<Button>(R.id.launchButton)
         button.setOnClickListener{
             // Do something in response to button click
-            Toast.makeText(this, "Test", Toast.LENGTH_LONG).show()
+            //Toast.makeText(this, "Test", Toast.LENGTH_LONG).show()
 
             val listIntent = Intent(this, ListActivity::class.java).apply {
                     putExtra(EXTRA_MESSAGE, "Open List")
