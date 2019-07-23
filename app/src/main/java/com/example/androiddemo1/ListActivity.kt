@@ -31,8 +31,8 @@ class ListActivity : AppCompatActivity() {
     * */
     private fun createProgress() {
         loaderManager = ProgressBar(this)
-        //loaderManager?.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         loaderManager?.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+
         val linearLayout = findViewById<LinearLayout>(R.id.ListRoot_Acitivity)
         linearLayout.addView(loaderManager)
         loaderManager?.visibility = View.GONE
