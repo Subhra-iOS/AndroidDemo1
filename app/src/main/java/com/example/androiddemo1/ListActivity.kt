@@ -1,14 +1,20 @@
 package com.example.androiddemo1
 
 
-import android.app.ProgressDialog
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
+import android.util.AttributeSet
 import android.widget.TextView
 import  android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.LinearLayout
+import java.lang.NullPointerException
 
 class ListActivity : AppCompatActivity() {
+
+    private  var loaderManager : ProgressBar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,20 +26,40 @@ class ListActivity : AppCompatActivity() {
             this.text = message
         }
 
+        this.createProgress()
+    }
+    /*
+    * Create Progress
+    * */
+    private fun createProgress() {
+        loaderManager = ProgressBar(this)
+        //loaderManager?.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        loaderManager?.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        val linearLayout = findViewById<LinearLayout>(R.id.ListRoot_Acitivity)
+        linearLayout.addView(loaderManager)
+        loaderManager?.visibility = View.GONE
     }
 
     fun didTapOnLoadAction(view : View){
 
-            print("Tap to load image")
-            this.showLoader()
-    }
+        val isVisible = when {
 
-    private fun showLoader(){
+            loaderManager?.visibility == View.GONE -> { View.VISIBLE }
+            else -> { View.GONE }
 
-        val loaderManager : ProgressDialog = ProgressDialog(this)
-        loaderManager.setCanceledOnTouchOutside(true)
-        loaderManager.closeOptionsMenu()
-        loaderManager.show()
+        }
+
+        loaderManager?.visibility = isVisible
+
+        var loaderButton = findViewById<Button>(R.id.loadButton)
+        val buttonText = when {
+
+            (isVisible == View.VISIBLE) -> { "Hide Loader" }
+            else -> { "Show Loader" }
+
+        }
+
+        loaderButton.text = buttonText
 
     }
 

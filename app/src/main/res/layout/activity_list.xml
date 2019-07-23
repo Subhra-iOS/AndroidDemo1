@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent" android:keyboardNavigationCluster="true">
+              android:layout_height="match_parent" android:keyboardNavigationCluster="true"
+>
 
     <TextView
             android:layout_width="285dp"
@@ -11,16 +12,19 @@
             android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp" android:paddingBottom="5dp"
             android:textSize="36sp" android:autoSizeTextType="uniform"
     />
-    <ImageView
-            android:layout_width="307dp"
-            android:layout_height="345dp" app:srcCompat="@android:drawable/alert_light_frame"
-            android:id="@+id/defaultImageView" android:layout_gravity="center|center_vertical"
-            android:layout_marginTop="100dp" android:adjustViewBounds="false" android:cropToPadding="false"
-    />
+    <LinearLayout
+            android:id="@+id/ListRoot_Acitivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    </LinearLayout>
     <Button
             android:text="Tap to load"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/loadButton"
-            android:layout_gravity="center|center_horizontal" android:layout_marginTop="30dp"
-            android:contextClickable="false" android:onClick="didTapOnLoadAction"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/loadButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="@android:dimen/thumbnail_height"
+            android:contextClickable="false" android:onClick="didTapOnLoadAction"
+    />
 </LinearLayout>
